@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Miami", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 3px;
+}
+
+#skills {
+  display: flex;
+  text-align: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 5rem;
+  margin: 1rem;
+  &:hover {
+    //animation: an2 1s ease-in-out infinite;
+    animation: spin 1s linear infinite;
+  }
+}
+
+#skills-icons {
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  margin: 5vh 0 3vh;
+  font-size: 4rem;
+  font-weight: 100;
+  animation: an1 1s ease-in-out infinite alternate;
+}
+
+h1::after,
+h1::before {
+  content: attr(data-glitch);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+h1::before {
+  animation: an2 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: rgba($color: red, $alpha: 1);
+  z-index: -1;
+}
+
+h1::after {
+  animation: an3 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: rgba($color: blue, $alpha: 0.9);
+  z-index: -2;
+}
+
+#estudios{
+  width: 90vw;
+}
