@@ -1,0 +1,51 @@
+#certificados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+h3 {
+  margin: 1rem;
+  cursor: pointer;
+  &:hover {
+    animation: an1 1s ease-in-out infinite alternate;
+    text-shadow: 0 0 1rem #fff, 0 0 1.5rem #fff, 0 0 2.5rem #d400ff,
+      0 0 4rem #d400ff;
+  }
+flex-direction: column;
+}
+
+h3::before {
+  content: attr(data-glitch);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+h3::after {
+  content: attr(data-glitch);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: -2;
+}
+
+h3:hover::before {
+  animation: an2 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: rgba($color: red, $alpha: 1);
+}
+
+h3:hover::after {
+  animation: an3 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: rgba($color: blue, $alpha: 0.9);
+}
+
+img {
+  max-width: 40rem;
+}
