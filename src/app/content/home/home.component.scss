@@ -1,0 +1,86 @@
+#home {
+  color: white;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2vw;
+  justify-content: center;
+  width: 100vw;
+  height: 85vh;
+}
+
+#text {
+  padding: 1vw;
+  border-radius: 10px;
+  align-content: center;
+  align-items: center;
+  margin-left: 6vw;
+}
+
+#holo_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 3vw;
+}
+
+#holo_front,
+#holo_bg,
+#me {
+  position: absolute;
+}
+
+#holo_bg {
+  width: 35vw;
+  padding: 8vw;
+  animation: an4 3s ease-in-out infinite alternate;
+}
+
+#me {
+  width: 35vw;
+  padding: 6vw;
+}
+
+#holo_front {
+  width: 35vw;
+  padding: 6vw;
+  animation: an3 3s ease-in-out infinite alternate;
+}
+
+p {
+  font-size: 1.5vw;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 3px;
+  position: relative;
+  color: #fdecff;
+  font-weight: 700;
+  z-index: 1;
+  animation: an1 1s ease-in-out infinite alternate;
+}
+
+p::after,
+p::before {
+  content: attr(data-glitch);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+p::before {
+  animation: an2 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: rgba($color: red, $alpha: 1);
+  z-index: -1;
+}
+
+p::after {
+  animation: an3 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: rgba($color: blue, $alpha: 0.9);
+  z-index: -2;
+}
+
+#Calcara {//cambiar font-size al momento de crear adaptabilidad a movil. De vw a rem (que el tamaño de letra no cambie con el cambio de tamaño de pantalla)
+  font-family: "Miami", sans-serif;
+  font-size: 7vw;
+  font-weight: 100;
+}

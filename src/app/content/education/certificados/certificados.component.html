@@ -1,0 +1,22 @@
+<div id="certificados">
+  <div (click)="toggleImage(1)">
+    <h3>Fullstack Java - Codo a codo</h3>
+    <img *ngIf="showImage === 1" src="assets/certificado_1.png" alt="Fullstack Java">
+  </div>
+  <div (click)="toggleImage(2)">
+    <h3>Excell, Power Bi & SQL - BA Multiplica</h3>
+    <img *ngIf="showImage === 2" src="assets/certificado_2.png" alt="Excell, Power Bi & SQL">
+  </div>
+  <div (click)="toggleImage(3)">
+    <h3>Elementos de la IA - UNED</h3>
+    <img *ngIf="showImage === 3" src="assets/certificado_3.png" alt="Elementos de la IA">
+  </div>
+  <div (click)="toggleImage(4)">
+    <h3>Big Data - Codo a codo</h3>
+    <p *ngIf="showImage === 4">Certificado en espera</p>
+  </div>
+  <div (click)="toggleImage(5)">
+    <h3>Testing QA - Codo a codo</h3>
+    <p *ngIf="showImage === 5">Crusando</p>
+  </div>
+</div>

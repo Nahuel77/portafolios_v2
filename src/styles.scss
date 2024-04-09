@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+div.container {
+  position: absolute;
+  top: 40%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > div {
+  position: absolute;
+  background-color: transparent;
+  aspect-ratio: 0.5;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0);
+  box-shadow: 3px 1px 20px rgba($color: blue, $alpha: 1),
+    -3px -1px 20px rgba($color: red, $alpha: 0.4);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: move 3s ease-in-out calc(var(--i) * 0.1s) infinite;
+  width: calc(var(--i) * 18vmin);
+  z-index: -1;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: rotateX(70deg) translateZ(50px) translateY(0);
+    filter: hue-rotate(0);
+  }
+  97% {
+    transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+    filter: hue-rotate(60deg);
+  }
+}
+
+@keyframes an1 {
+  0%,
+  40%,
+  44%,
+  58%,
+  61%,
+  65%,
+  69%,
+  72%,
+  100% {
+    transform: skew(0);
+  }
+  41% {
+    transform: skew(10deg);
+    color: rgb(233, 199, 255);
+  }
+  42% {
+    transform: skew(10deg);
+  }
+  59% {
+    transform: skew(40deg) skew(10deg);
+  }
+  60% {
+    transform: skew(-40deg) skew(-10deg);
+    color: rgb(223, 255, 182);
+  }
+  63% {
+    transform: skew(10deg) skew(-20deg);
+  }
+  70% {
+    transform: skew(-50deg) skew(-20deg);
+  }
+  71% {
+    transform: skew(10deg) skew(-10deg);
+  }
+}
+
+@keyframes an2 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+}
+
+// @keyframes an3 {
+//   0% {
+//     transform: translate(0);
+//   }
+//   20% {
+//     transform: translate(3px, -3px);
+//   }
+//   40% {
+//     transform: translate(3px, 3px);
+//   }
+//   60% {
+//     transform: translate(-3px, -3px);
+//   }
+//   80% {
+//     transform: translate(-3px, 3px);
+//   }
+// }
+
+@keyframes an3 {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 20deg);
+  }
+}
+
+@keyframes an4 {
+  0% {
+    transform: rotate3d(0, 1, 0, 25deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 5deg);
+  }
+}
+
+@keyframes spin {
+  0% { transform: skew(0deg); }
+  25% { transform: skew(15deg); }
+  50% { transform: skew(-10deg); }
+  75% { transform: skew(5deg); }
+  100% { transform: skew(0deg); }
+}
